@@ -11,7 +11,7 @@ formEl.addEventListener('submit', (ev) => {
       console.log('sended!');
       console.log(valid);
       const html = valid.map((value) => {
-        return `<div class="box off"><h2>${value.title}</h2><h3> username : ${value.author.username}</h3>${value.content}<h4>${value.review}</h4></div>`;
+        return `<div class="box off"><h2>${value.title}</h2><h3> username : ${value.author.username}</h3>${value.content}<h4>${value.review.review}</h4></div>`;
       }).join();
       el.innerHTML = html;
     } catch (err) {

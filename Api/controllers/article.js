@@ -5,7 +5,7 @@ require('models/review');
 const getList = async (name) => {
   const docs = await ArticleModel.find({
     title: name,
-  }).populate('author', 'review');
+  }).populate('author').populate('review');
   return docs;
 };
 const create = async (title, content, userid, reviewid) => {
